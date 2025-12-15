@@ -44,39 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'YOUR_WEB_API_KEY',
-    appId: '1:YOUR_APP_ID:web:YOUR_WEB_APP_ID',
-    messagingSenderId: 'YOUR_SENDER_ID',
+    apiKey: 'AIzaSyAYl4LXGoOPa5Ir8oAFnK061Zw51qpO8ps',
+    appId: '1:384960133218:web:b91f4d530bffb45082f93b',
+    messagingSenderId: '384960133218',
     projectId: 'go-iceland',
     authDomain: 'go-iceland.firebaseapp.com',
-    storageBucket: 'go-iceland.appspot.com',
+    storageBucket: 'go-iceland.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'YOUR_ANDROID_API_KEY',
-    appId: '1:YOUR_APP_ID:android:YOUR_ANDROID_APP_ID',
-    messagingSenderId: 'YOUR_SENDER_ID',
+    apiKey: 'AIzaSyAYl4LXGoOPa5Ir8oAFnK061Zw51qpO8ps',
+    appId: '1:384960133218:android:b91f4d530bffb45082f93b',
+    messagingSenderId: '384960133218',
     projectId: 'go-iceland',
-    storageBucket: 'go-iceland.appspot.com',
+    storageBucket: 'go-iceland.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'YOUR_IOS_API_KEY',
-    appId: '1:YOUR_APP_ID:ios:YOUR_IOS_APP_ID',
-    messagingSenderId: 'YOUR_SENDER_ID',
+    apiKey: 'AIzaSyACXrfjLLkrITIyLIsrqi4AulE3R01Xfec',
+    appId: '1:384960133218:ios:2422dd4fa5d4ea8382f93b',
+    messagingSenderId: '384960133218',
     projectId: 'go-iceland',
-    storageBucket: 'go-iceland.appspot.com',
-    iosClientId: 'YOUR_IOS_CLIENT_ID',
-    iosBundleId: 'com.goiceland.app',
+    storageBucket: 'go-iceland.firebasestorage.app',
+    iosBundleId: 'Go.iceland.app',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'YOUR_MACOS_API_KEY',
-    appId: '1:YOUR_APP_ID:ios:YOUR_MACOS_APP_ID',
-    messagingSenderId: 'YOUR_SENDER_ID',
+    apiKey: 'AIzaSyACXrfjLLkrITIyLIsrqi4AulE3R01Xfec',
+    appId: '1:384960133218:ios:2422dd4fa5d4ea8382f93b',
+    messagingSenderId: '384960133218',
     projectId: 'go-iceland',
-    storageBucket: 'go-iceland.appspot.com',
-    iosClientId: 'YOUR_MACOS_CLIENT_ID',
-    iosBundleId: 'com.goiceland.app',
+    storageBucket: 'go-iceland.firebasestorage.app',
+    iosBundleId: 'Go.iceland.app',
   );
 }
