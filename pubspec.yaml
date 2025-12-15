@@ -1,0 +1,60 @@
+name: go_iceland
+description: Ultimate Iceland travel app
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Localization
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+
+  # Maps
+  flutter_map: ^7.0.2
+  flutter_map_tile_caching: ^10.0.0
+  latlong2: ^0.9.1
+
+  # Firebase
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.0
+
+  # Local storage & caching
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # State & utilities
+  provider: ^6.1.2
+  cached_network_image: ^3.3.1
+  geolocator: ^11.0.0
+
+  # Charts
+  fl_chart: ^0.66.2
+
+  # Monetization
+  google_mobile_ads: ^5.1.0
+  in_app_purchase: ^3.1.11
+
+  # Animations
+  animations: ^2.0.11
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.10
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/splash/
+    - assets/icon/
+    - assets/i18n/
