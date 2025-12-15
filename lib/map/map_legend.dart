@@ -150,39 +150,66 @@ class _MapLegendState extends State<MapLegend> {
 /// Get marker color by category
 Color getCategoryColor(String category) {
   final cat = category.toLowerCase();
-  if (cat.contains('waterfall')) return const Color(0xFF2196F3);
-  if (cat.contains('nature') || cat.contains('park'))
+  if (cat.contains('waterfall')) {
+    return const Color(0xFF2196F3);
+  }
+  if (cat.contains('nature') || cat.contains('park')) {
     return const Color(0xFF4CAF50);
-  if (cat.contains('food') || cat.contains('restaurant'))
+  }
+  if (cat.contains('food') || cat.contains('restaurant')) {
     return const Color(0xFFFF9800);
-  if (cat.contains('hotel') || cat.contains('accommodation'))
+  }
+  if (cat.contains('hotel') || cat.contains('accommodation')) {
     return const Color(0xFF9C27B0);
-  if (cat.contains('trail') || cat.contains('hik'))
+  }
+  if (cat.contains('trail') || cat.contains('hik')) {
     return const Color(0xFFF44336);
-  if (cat.contains('activity') || cat.contains('activities'))
+  }
+  if (cat.contains('activity') || cat.contains('activities')) {
     return const Color(0xFF00E5FF);
-  if (cat.contains('beach')) return const Color(0xFFFFEB3B);
-  if (cat.contains('glacier')) return const Color(0xFF00BCD4);
-  if (cat.contains('hot') || cat.contains('spring'))
+  }
+  if (cat.contains('beach')) {
+    return const Color(0xFFFFEB3B);
+  }
+  if (cat.contains('glacier')) {
+    return const Color(0xFF00BCD4);
+  }
+  if (cat.contains('hot') || cat.contains('spring')) {
     return const Color(0xFFFF5722);
+  }
   return const Color(0xFF00E5FF); // Default cyan
 }
 
 /// Get category icon
 IconData getCategoryIcon(String category) {
   final cat = category.toLowerCase();
-  if (cat.contains('waterfall')) return Icons.water_drop;
-  if (cat.contains('nature') || cat.contains('park')) return Icons.park;
-  if (cat.contains('food') || cat.contains('restaurant'))
+  if (cat.contains('waterfall')) {
+    return Icons.water_drop;
+  }
+  if (cat.contains('nature') || cat.contains('park')) {
+    return Icons.park;
+  }
+  if (cat.contains('food') || cat.contains('restaurant')) {
     return Icons.restaurant;
-  if (cat.contains('hotel') || cat.contains('accommodation'))
+  }
+  if (cat.contains('hotel') || cat.contains('accommodation')) {
     return Icons.hotel;
-  if (cat.contains('trail') || cat.contains('hik')) return Icons.hiking;
-  if (cat.contains('activity') || cat.contains('activities'))
+  }
+  if (cat.contains('trail') || cat.contains('hik')) {
+    return Icons.hiking;
+  }
+  if (cat.contains('activity') || cat.contains('activities')) {
     return Icons.local_activity;
-  if (cat.contains('beach')) return Icons.beach_access;
-  if (cat.contains('glacier')) return Icons.ac_unit;
-  if (cat.contains('hot') || cat.contains('spring')) return Icons.hot_tub;
+  }
+  if (cat.contains('beach')) {
+    return Icons.beach_access;
+  }
+  if (cat.contains('glacier')) {
+    return Icons.ac_unit;
+  }
+  if (cat.contains('hot') || cat.contains('spring')) {
+    return Icons.hot_tub;
+  }
   if (cat.contains('view')) return Icons.landscape;
   return Icons.place; // Default
 }

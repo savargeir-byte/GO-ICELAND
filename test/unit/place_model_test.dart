@@ -8,32 +8,31 @@ void main() {
         id: 'test-1',
         name: 'Gullfoss',
         category: 'waterfall',
-        latitude: 64.3271,
-        longitude: -20.1210,
+        lat: 64.3271,
+        lng: -20.1210,
         rating: 4.8,
         description: 'Golden waterfall in Iceland',
-        tags: ['nature', 'famous'],
       );
 
       expect(place.id, equals('test-1'));
       expect(place.name, equals('Gullfoss'));
       expect(place.category, equals('waterfall'));
       expect(place.rating, equals(4.8));
-      expect(place.tags, containsAll(['nature', 'famous']));
+      expect(place.description, equals('Golden waterfall in Iceland'));
     });
 
-    test('defaults to empty lists for optional fields', () {
+    test('handles optional fields', () {
       final place = Place(
         id: 'test-2',
         name: 'Test Place',
         category: 'hotel',
-        latitude: 64.0,
-        longitude: -20.0,
-        rating: 4.0,
+        lat: 64.0,
+        lng: -20.0,
       );
 
-      expect(place.tags, equals([]));
-      expect(place.services, equals([]));
+      expect(place.rating, isNull);
+      expect(place.description, isNull);
+      expect(place.imageUrl, isNull);
     });
 
     test('supports various categories', () {
@@ -51,28 +50,33 @@ void main() {
           id: 'test-$category',
           name: 'Test $category',
           category: category,
-          latitude: 64.0,
-          longitude: -20.0,
-          rating: 4.0,
+          lat: 64.0,
+          lng: -20.0,
         );
 
         expect(place.category, equals(category));
       }
     });
 
-    test('handles null optional fields', () {
-      final place = Place(
-        id: 'test-3',
-        name: 'Minimal Place',
-        category: 'restaurant',
-        latitude: 64.0,
-        longitude: -20.0,
-        rating: 4.0,
-      );
+    test('fromFirestore factory works correctly', () {
+      final data = {
+        'name': 'Gullfoss',
+        'category': 'waterfall',
+        'lat': 64.3271,
+        'lng': -20.1210,
+        'rating': 4.8,
+        'description': 'Golden waterfall',
+        'featured': true,
+        'popularity': 100,
+      };
 
-      expect(place.description, isNull);
-      expect(place.imageUrl, isNull);
-      expect(place.priceLevel, isNull);
+      final place = Place.fromFirestore(data, 'test-id');
+
+      expect(place.id, equals('test-id'));
+      expect(place.name, equals('Gullfoss'));
+      expect(place.lat, equals(64.3271));
+      expect(place.featured, equals(true));
+      expect(place.popularity, equals(100));
     });
   });
 }
