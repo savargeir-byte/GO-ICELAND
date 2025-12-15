@@ -139,7 +139,7 @@ class _ExploreCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               blurRadius: 12,
-              color: Colors.black.withOpacity(0.06),
+              color: Colors.black.withValues(alpha: 0.06),
             )
           ],
         ),

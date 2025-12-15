@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
+  // Color constants
+  static const Color cyanAccent = Color(0xFF00E5FF);
+  static const Color purpleAccent = Color(0xFF6A5CFF);
+  static const Color darkBackground = Color(0xFF050B14);
+  static const Color glassBackground = Color(0xFF0B132B);
+
   // Aurora / Northern lights dark theme 🌌
   static ThemeData dark = ThemeData(
     brightness: Brightness.dark,
@@ -10,11 +16,10 @@ class AppTheme {
       primary: Color(0xFF00E5FF), // Aurora cyan
       secondary: Color(0xFF6A5CFF), // Purple glow
       surface: Color(0xFF0B132B),
-      background: Color(0xFF050B14),
+      surfaceContainerLowest: Color(0xFF050B14),
       onPrimary: Colors.black,
       onSecondary: Colors.white,
       onSurface: Colors.white,
-      onBackground: Colors.white,
     ),
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
@@ -58,7 +63,7 @@ class AppTheme {
     ),
     chipTheme: ChipThemeData(
       backgroundColor: const Color(0xFF1A2744),
-      selectedColor: const Color(0xFF00E5FF).withOpacity(0.3),
+      selectedColor: const Color(0xFF00E5FF).withValues(alpha: 0.3),
       labelStyle: const TextStyle(color: Colors.white),
       secondaryLabelStyle: const TextStyle(color: Colors.white),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -70,7 +75,7 @@ class AppTheme {
       activeTrackColor: const Color(0xFF00E5FF),
       inactiveTrackColor: Colors.white24,
       thumbColor: const Color(0xFF00E5FF),
-      overlayColor: const Color(0xFF00E5FF).withOpacity(0.2),
+      overlayColor: const Color(0xFF00E5FF).withValues(alpha: 0.2),
     ),
     cardTheme: CardThemeData(
       color: const Color(0xFF0B132B),
@@ -93,7 +98,7 @@ class AppTheme {
     scaffoldBackgroundColor: const Color(0xFFF7FFF7),
     colorScheme: ColorScheme.fromSeed(
       seedColor: const Color(0xFF2EC4B6),
-      background: const Color(0xFFF7FFF7),
+      surface: const Color(0xFFF7FFF7),
     ),
     textTheme: const TextTheme(
       headlineMedium: TextStyle(fontWeight: FontWeight.bold),

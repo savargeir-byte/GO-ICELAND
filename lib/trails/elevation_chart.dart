@@ -40,7 +40,7 @@ class ElevationChart extends StatelessWidget {
             drawVerticalLine: false,
             horizontalInterval: range > 0 ? range / 4 : 50,
             getDrawingHorizontalLine: (value) => FlLine(
-              color: Colors.white.withOpacity(0.1),
+              color: Colors.white.withValues(alpha: 0.1),
               strokeWidth: 1,
             ),
           ),
@@ -80,7 +80,7 @@ class ElevationChart extends StatelessWidget {
           lineTouchData: LineTouchData(
             enabled: true,
             touchTooltipData: LineTouchTooltipData(
-              getTooltipColor: (spot) => const Color(0xFF1A1A2E),
+              tooltipBgColor: const Color(0xFF1A1A2E),
               tooltipRoundedRadius: 8,
               getTooltipItems: (spots) {
                 return spots.map((spot) {
@@ -114,8 +114,8 @@ class ElevationChart extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    const Color(0xFF00E5FF).withOpacity(0.4),
-                    const Color(0xFF00E5FF).withOpacity(0.0),
+                    const Color(0xFF00E5FF).withValues(alpha: 0.4),
+                    const Color(0xFF00E5FF).withValues(alpha: 0.0),
                   ],
                 ),
               ),
@@ -165,7 +165,7 @@ class MiniElevationChart extends StatelessWidget {
               dotData: const FlDotData(show: false),
               belowBarData: BarAreaData(
                 show: true,
-                color: color.withOpacity(0.2),
+                color: color.withValues(alpha: 0.2),
               ),
             ),
           ],

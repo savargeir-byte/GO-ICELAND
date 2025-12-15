@@ -98,18 +98,18 @@ class PremiumLockedCard extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              const Color(0xFF1A1A2E).withOpacity(0.9),
-              const Color(0xFF0F0F1E).withOpacity(0.95),
+              const Color(0xFF1A1A2E).withValues(alpha: 0.9),
+              const Color(0xFF0F0F1E).withValues(alpha: 0.95),
             ],
           ),
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
-            color: const Color(0xFF6A5CFF).withOpacity(0.5),
+            color: const Color(0xFF6A5CFF).withValues(alpha: 0.5),
             width: 1,
           ),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF6A5CFF).withOpacity(0.2),
+              color: const Color(0xFF6A5CFF).withValues(alpha: 0.2),
               blurRadius: 20,
               offset: const Offset(0, 10),
             ),
@@ -127,7 +127,7 @@ class PremiumLockedCard extends StatelessWidget {
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xFF00E5FF).withOpacity(0.3),
+                    color: const Color(0xFF00E5FF).withValues(alpha: 0.3),
                     blurRadius: 20,
                   ),
                 ],
@@ -152,7 +152,7 @@ class PremiumLockedCard extends StatelessWidget {
               message ?? 'Upgrade to unlock this feature',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white.withOpacity(0.7),
+                color: Colors.white.withValues(alpha: 0.7),
                 fontSize: 14,
               ),
             ),
@@ -225,7 +225,7 @@ class PremiumUpgradeSheet extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             'Unlock the full Iceland experience',
-            style: TextStyle(color: Colors.white.withOpacity(0.7)),
+            style: TextStyle(color: Colors.white.withValues(alpha: 0.7)),
           ),
           const SizedBox(height: 24),
           _featureRow(Icons.terrain, 'Expert trails & hidden gems'),
@@ -262,7 +262,7 @@ class PremiumUpgradeSheet extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             child: Text(
               'Maybe later',
-              style: TextStyle(color: Colors.white.withOpacity(0.5)),
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.5)),
             ),
           ),
           const SizedBox(height: 16),
@@ -279,7 +279,7 @@ class PremiumUpgradeSheet extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: const Color(0xFF00E5FF).withOpacity(0.2),
+              color: const Color(0xFF00E5FF).withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, color: const Color(0xFF00E5FF), size: 20),

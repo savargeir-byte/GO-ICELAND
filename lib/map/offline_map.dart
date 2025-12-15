@@ -23,9 +23,9 @@ class OfflineMap extends StatefulWidget {
 }
 
 class _OfflineMapState extends State<OfflineMap> {
-  bool _isOffline = false;
-  bool _isCaching = false;
-  double _cacheProgress = 0;
+  final bool _isOffline = false;
+  final bool _isCaching = false;
+  final double _cacheProgress = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -155,7 +155,7 @@ class OfflineTileManager {
     );
 
     // Download tiles for zoom levels 5-12
-    await store.download.startForeground(
+    store.download.startForeground(
       region: region.toDownloadable(
         minZoom: 5,
         maxZoom: 12,
@@ -170,7 +170,7 @@ class OfflineTileManager {
   /// Get cache statistics
   static Future<Map<String, dynamic>> getCacheStats() async {
     final store = FMTCStore(storeName);
-    final stats = await store.stats;
+    final stats = store.stats;
     final size = await stats.size;
 
     return {

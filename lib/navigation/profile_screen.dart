@@ -39,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
                   BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
                     child: Container(
-                      color: Colors.black.withOpacity(0.2),
+                      color: Colors.black.withValues(alpha: 0.2),
                     ),
                   ),
                   // Profile info
@@ -239,13 +239,13 @@ class ProfileScreen extends StatelessWidget {
             Container(
               width: 1,
               height: 40,
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
             ),
             _buildStatItem('Trails', '8', Icons.hiking),
             Container(
               width: 1,
               height: 40,
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
             ),
             _buildStatItem('Distance', '145km', Icons.route),
           ],
@@ -322,7 +322,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               Icon(
                 Icons.arrow_forward_ios,
-                color: Colors.white.withOpacity(0.3),
+                color: Colors.white.withValues(alpha: 0.3),
                 size: 16,
               ),
             ],

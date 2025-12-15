@@ -97,7 +97,7 @@ class _CrystalFiltersState extends State<CrystalFilters> {
                         widget.onCategoryChanged?.call(cat['value']);
                       },
                       backgroundColor: const Color(0xFF1A2744),
-                      selectedColor: const Color(0xFF00E5FF).withOpacity(0.3),
+                      selectedColor: const Color(0xFF00E5FF).withValues(alpha: 0.3),
                       labelStyle: TextStyle(
                         color: isSelected
                             ? const Color(0xFF00E5FF)

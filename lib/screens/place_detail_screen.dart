@@ -75,7 +75,7 @@ class PlaceDetailScreen extends StatelessWidget {
                         end: Alignment.bottomCenter,
                         colors: [
                           Colors.transparent,
-                          const Color(0xFF050B14).withOpacity(0.8),
+                          const Color(0xFF050B14).withValues(alpha: 0.8),
                           const Color(0xFF050B14),
                         ],
                         stops: const [0.3, 0.7, 1.0],

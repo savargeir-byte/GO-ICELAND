@@ -1,10 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../widgets/glass_container.dart';
 
 class MapLegend extends StatefulWidget {
   final VoidCallback? onToggle;
-  
+
   const MapLegend({super.key, this.onToggle});
 
   @override
@@ -30,10 +29,10 @@ class _MapLegendState extends State<MapLegend> {
               child: Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF050B14).withOpacity(0.7),
+                  color: const Color(0xFF050B14).withValues(alpha: 0.7),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                    color: Colors.white.withOpacity(0.1),
+                    color: Colors.white.withValues(alpha: 0.1),
                     width: 1,
                   ),
                 ),
@@ -127,7 +126,7 @@ class _MapLegendState extends State<MapLegend> {
             shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
-                color: color.withOpacity(0.5),
+                color: color.withValues(alpha: 0.5),
                 blurRadius: 4,
               ),
             ],
@@ -152,14 +151,20 @@ class _MapLegendState extends State<MapLegend> {
 Color getCategoryColor(String category) {
   final cat = category.toLowerCase();
   if (cat.contains('waterfall')) return const Color(0xFF2196F3);
-  if (cat.contains('nature') || cat.contains('park')) return const Color(0xFF4CAF50);
-  if (cat.contains('food') || cat.contains('restaurant')) return const Color(0xFFFF9800);
-  if (cat.contains('hotel') || cat.contains('accommodation')) return const Color(0xFF9C27B0);
-  if (cat.contains('trail') || cat.contains('hik')) return const Color(0xFFF44336);
-  if (cat.contains('activity') || cat.contains('activities')) return const Color(0xFF00E5FF);
+  if (cat.contains('nature') || cat.contains('park'))
+    return const Color(0xFF4CAF50);
+  if (cat.contains('food') || cat.contains('restaurant'))
+    return const Color(0xFFFF9800);
+  if (cat.contains('hotel') || cat.contains('accommodation'))
+    return const Color(0xFF9C27B0);
+  if (cat.contains('trail') || cat.contains('hik'))
+    return const Color(0xFFF44336);
+  if (cat.contains('activity') || cat.contains('activities'))
+    return const Color(0xFF00E5FF);
   if (cat.contains('beach')) return const Color(0xFFFFEB3B);
   if (cat.contains('glacier')) return const Color(0xFF00BCD4);
-  if (cat.contains('hot') || cat.contains('spring')) return const Color(0xFFFF5722);
+  if (cat.contains('hot') || cat.contains('spring'))
+    return const Color(0xFFFF5722);
   return const Color(0xFF00E5FF); // Default cyan
 }
 
@@ -168,10 +173,13 @@ IconData getCategoryIcon(String category) {
   final cat = category.toLowerCase();
   if (cat.contains('waterfall')) return Icons.water_drop;
   if (cat.contains('nature') || cat.contains('park')) return Icons.park;
-  if (cat.contains('food') || cat.contains('restaurant')) return Icons.restaurant;
-  if (cat.contains('hotel') || cat.contains('accommodation')) return Icons.hotel;
+  if (cat.contains('food') || cat.contains('restaurant'))
+    return Icons.restaurant;
+  if (cat.contains('hotel') || cat.contains('accommodation'))
+    return Icons.hotel;
   if (cat.contains('trail') || cat.contains('hik')) return Icons.hiking;
-  if (cat.contains('activity') || cat.contains('activities')) return Icons.local_activity;
+  if (cat.contains('activity') || cat.contains('activities'))
+    return Icons.local_activity;
   if (cat.contains('beach')) return Icons.beach_access;
   if (cat.contains('glacier')) return Icons.ac_unit;
   if (cat.contains('hot') || cat.contains('spring')) return Icons.hot_tub;

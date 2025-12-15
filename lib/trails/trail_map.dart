@@ -68,7 +68,7 @@ class TrailMap extends StatelessWidget {
                 Polyline(
                   points: points,
                   strokeWidth: 12,
-                  color: diffColor.withOpacity(0.3),
+                  color: diffColor.withValues(alpha: 0.3),
                 ),
                 // Main trail line
                 Polyline(
@@ -93,7 +93,7 @@ class TrailMap extends StatelessWidget {
                       border: Border.all(color: Colors.white, width: 3),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
+                          color: Colors.black.withValues(alpha: 0.3),
                           blurRadius: 8,
                         ),
                       ],
@@ -117,7 +117,7 @@ class TrailMap extends StatelessWidget {
                       border: Border.all(color: Colors.white, width: 3),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
+                          color: Colors.black.withValues(alpha: 0.3),
                           blurRadius: 8,
                         ),
                       ],
@@ -155,7 +155,7 @@ class TrailMap extends StatelessWidget {
                           vertical: 6,
                         ),
                         decoration: BoxDecoration(
-                          color: diffColor.withOpacity(0.3),
+                          color: diffColor.withValues(alpha: 0.3),
                           borderRadius: BorderRadius.circular(20),
                           border: Border.all(color: diffColor),
                         ),

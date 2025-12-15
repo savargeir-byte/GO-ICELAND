@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../widgets/glass_container.dart';
@@ -113,8 +112,8 @@ class _UnifiedDetailState extends State<UnifiedDetail> {
                         end: Alignment.bottomCenter,
                         colors: [
                           Colors.transparent,
-                          Colors.black.withOpacity(0.3),
-                          const Color(0xFF050B14).withOpacity(0.9),
+                          Colors.black.withValues(alpha: 0.3),
+                          const Color(0xFF050B14).withValues(alpha: 0.9),
                         ],
                         stops: const [0.3, 0.7, 1.0],
                       ),
@@ -130,7 +129,7 @@ class _UnifiedDetailState extends State<UnifiedDetail> {
                         vertical: 6,
                       ),
                       decoration: BoxDecoration(
-                        color: categoryColor.withOpacity(0.3),
+                        color: categoryColor.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: categoryColor),
                       ),
@@ -331,9 +330,9 @@ class _UnifiedDetailState extends State<UnifiedDetail> {
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.1),
+            color: Colors.white.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.white.withOpacity(0.2)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
           ),
           child: Text(
             tag.toString(),
@@ -390,9 +389,10 @@ class _UnifiedDetailState extends State<UnifiedDetail> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: const Color(0xFF00E5FF).withOpacity(0.1),
+        color: const Color(0xFF00E5FF).withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF00E5FF).withOpacity(0.3)),
+        border:
+            Border.all(color: const Color(0xFF00E5FF).withValues(alpha: 0.3)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,

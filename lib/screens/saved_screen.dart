@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/place.dart';
-import '../services/firestore_service.dart';
 import 'place_detail_screen.dart';
 
 class SavedScreen extends StatelessWidget {
