@@ -170,7 +170,8 @@ class TrailMap extends StatelessWidget {
                       ),
                       const SizedBox(width: 12),
                       // Distance
-                      const Icon(Icons.straighten, color: Colors.white70, size: 18),
+                      const Icon(Icons.straighten,
+                          color: Colors.white70, size: 18),
                       const SizedBox(width: 4),
                       Text(
                         '${trail.lengthKm.toStringAsFixed(1)} km',
@@ -178,7 +179,8 @@ class TrailMap extends StatelessWidget {
                       ),
                       const Spacer(),
                       // Elevation gain
-                      const Icon(Icons.trending_up, color: Colors.green, size: 18),
+                      const Icon(Icons.trending_up,
+                          color: Colors.green, size: 18),
                       const SizedBox(width: 4),
                       Text(
                         '${trail.elevationGain.toStringAsFixed(0)}m',

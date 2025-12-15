@@ -28,7 +28,8 @@ class PersonalizedFeed {
       double score = 0;
 
       // 1. Distance score (closer = higher, max 30 points)
-      final distance = _calculateDistance(userLat, userLng, place.lat, place.lng);
+      final distance =
+          _calculateDistance(userLat, userLng, place.lat, place.lng);
       score += max(0, 30 - (distance * 0.3)); // Reduce score by 0.3 per km
 
       // 2. Saved category boost (max 25 points)
@@ -47,7 +48,6 @@ class PersonalizedFeed {
       // 5. Featured boost (5 points)
       if (place.featured == true) {
         score += 5;
-
       }
 
       // 6. Already saved penalty (don't show saved at top)
@@ -72,10 +72,14 @@ class PersonalizedFeed {
     double maxDistanceKm = 50,
     int limit = 20,
   }) {
-    final nearby = allPlaces.map((place) {
-      final distance = _calculateDistance(userLat, userLng, place.lat, place.lng);
-      return MapEntry(place, distance);
-    }).where((e) => e.value <= maxDistanceKm).toList();
+    final nearby = allPlaces
+        .map((place) {
+          final distance =
+              _calculateDistance(userLat, userLng, place.lat, place.lng);
+          return MapEntry(place, distance);
+        })
+        .where((e) => e.value <= maxDistanceKm)
+        .toList();
 
     nearby.sort((a, b) => a.value.compareTo(b.value));
 
@@ -128,7 +132,8 @@ class PersonalizedFeed {
 
     // Find places in same categories that aren't saved
     final similar = allPlaces
-        .where((p) => savedCategories.contains(p.category) && !savedIds.contains(p.id))
+        .where((p) =>
+            savedCategories.contains(p.category) && !savedIds.contains(p.id))
         .toList();
 
     similar.sort((a, b) => b.rating.compareTo(a.rating));

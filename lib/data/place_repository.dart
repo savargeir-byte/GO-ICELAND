@@ -31,9 +31,7 @@ class PlaceRepository {
         });
       }
 
-      return snap.docs
-          .map((d) => PlaceModel.fromJson(d.id, d.data()))
-          .toList();
+      return snap.docs.map((d) => PlaceModel.fromJson(d.id, d.data())).toList();
     } catch (e) {
       // Fallback to cache on error
       return getCachedPlaces(category: category);
@@ -119,10 +117,7 @@ class PlaceRepository {
   Map<String, dynamic> getCacheStats() {
     return {
       'count': _box.length,
-      'categories': _box.values
-          .map((e) => e['category'])
-          .toSet()
-          .toList(),
+      'categories': _box.values.map((e) => e['category']).toSet().toList(),
     };
   }
 }

@@ -12,11 +12,11 @@ class L10n {
 
   static Locale? getLocale(String? code) {
     if (code == null) return null;
-    
+
     for (var locale in supported) {
       if (locale.languageCode == code) return locale;
     }
-    
+
     return null;
   }
 

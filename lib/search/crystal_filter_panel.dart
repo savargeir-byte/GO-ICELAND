@@ -117,7 +117,8 @@ class _CrystalFilterPanelState extends State<CrystalFilterPanel> {
   }
 
   Widget _chip(String label) {
-    final isSelected = _selected == label || (_selected == null && label == 'All');
+    final isSelected =
+        _selected == label || (_selected == null && label == 'All');
     final key = label == 'All' ? '' : label.toLowerCase().replaceAll(' ', '_');
 
     return GestureDetector(
